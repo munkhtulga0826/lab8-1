@@ -1,0 +1,63 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <title>Lab8</title>
+    <script src="https://kit.fontawesome.com/f9ecf2a419.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <main>
+        <div class="btn-container">
+            <button onclick="hangmanStart()" class="btn btn-hangman">Hangman</button>
+        </div>
+    </main>
+    <div class="centerer">
+        <div class="hangman">
+            <div class="text-container">
+                <p class="question">Амьд бие амьсгалахад юу хэрэгтэй вэ?</p>
+                <input id="answer" name="data" oninput="hangmanValidate()" onkeydown="hangmanKeyValidate()" for="data"
+                    type="text" class="answer-box" placeholder="Your answer">
+                <!-- <button type="button" onclick="hangmanValidate()">OK</button> -->
+            </div>
+
+            <div class="hangman-container">
+
+                <div class="stickman">
+                    <div class="head"></div>
+                    <div class="body"></div>
+                    <div class="arm-left"></div>
+                    <div class="arm-right"></div>
+                    <div class="leg-left"></div>
+                    <div class="leg-right"></div>
+                </div>
+            </div>
+            <div class="close">
+                <a onclick="closeHangman()"><i class="far fa-times-circle"></i></a>
+            </div>
+            <div class="timer">
+                <h2 class="timer-text">9</h2>
+            </div>
+        </div>
+    </div>
+    <script>
+        let main = document.querySelector('main');
+        let hangman = document.querySelector('.centerer');
+        let head = document.querySelector('.head');
+        let stickbody = document.querySelector('.body');
+        let armLeft = document.querySelector('.arm-left');
+        let armRight = document.querySelector('.arm-right');
+        let legLeft = document.querySelector('.leg-left');
+        let legRight = document.querySelector('.leg-right');
+        let stickman = document.querySelector('.stickman');
+        
+        
+    </script>
+    <script src="js/hangman.js"></script>
+</body>
+
+</html>
